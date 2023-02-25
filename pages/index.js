@@ -8,13 +8,13 @@ import AutocompleteInput from "@/components/Search";
 
 export default function Home() {
   const [map, setMap] = React.useState(null);
+  const [resData, setResData] = React.useState([]);
   const [keyword, setKeyword] = React.useState("Bang sue");
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY;
   const [locationSelected, setLocationseleted] = React.useState({
     lat: 13.736717,
     lng: 100.523186,
   });
-  const [resData, setResData] = React.useState([]);
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY;
 
   const containerStyle = {
     width: "100%",
